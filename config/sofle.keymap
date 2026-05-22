@@ -53,7 +53,9 @@
                           &tog 3  &kp LALT  &kp LEFT_META  &mo 1   &kp RET       &kp SPACE       &mo 2   &kp BACKSPACE  &kp RALT   &kp PRINTSCREEN
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll_sensor>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp LC(N) LC(P)>;
         };
 
         lower_layer {
@@ -75,7 +77,9 @@
                       &trans     &trans    &trans    &trans     &trans    &trans  &trans     &trans    &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll_sensor>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp LC(N) LC(P)>;
         };
 
         raise_layer {
@@ -92,11 +96,13 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4                    &kp K_PREVIOUS  &kp K_PP        &kp K_NEXT    &trans           &trans          &trans
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans            &kp LANG1                       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &msc SCRL_UP    &trans
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &kp LEFT_COMMAND  &kt LANG2                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE       &trans        &trans    &trans  &mkp MCLK       &mkp LCLK       &mkp RCLK     &trans           &trans          &trans
+&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE       &kp LC(B)     &trans    &trans  &mkp MCLK       &mkp LCLK       &mkp RCLK     &trans           &trans          &trans
                           &kp CAPS      &trans        &trans            &trans        &trans    &trans  &trans          &trans          &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll_sensor>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp LC(N) LC(P)>;
         };
 
         adjust_layer {
@@ -112,8 +118,18 @@
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &none  &none  &none  &none  &none  &none
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                  &none  &none  &none  &none  &none  &none
 &none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                            &none  &none  &none  &none  &none  &none
-&none              &none            &none            &none            &none            &none            &none    &none  &none  &none  &none  &none  &none  &none
+&none              &none            &none            &none            &none            &kp LC(B)        &none    &none  &none  &none  &none  &none  &none  &none
                                     &trans           &none            &none            &none            &none    &none  &none  &none  &none  &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
