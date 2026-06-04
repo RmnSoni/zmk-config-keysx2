@@ -16,21 +16,16 @@
 #define RAISE 2
 #define ADJUST 3
 
+&mt {
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <125>;
+    flavor = "tap-preferred";
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
-
-    behaviors {
-        scroll_sensor: scroll_sensor {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROLL_SENSOR";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <30>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
